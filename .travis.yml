@@ -10,8 +10,8 @@ install:
 # Build mono from source, build the project, and run tests
 script:
  - git clone https://github.com/inorton/mono-ubuntu-build.git
- - source mono_env /opt/mono
- - bash build_mono
+ - source mono-ubuntu-build/mono_env /opt/mono
+ - bash mono-ubuntu-build/build_mono
 # - xbuild CI-build.msbuild /t:Deploy
 
 # Only watch the development branch
