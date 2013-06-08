@@ -1,0 +1,17 @@
+# Travis-CI Build for tracking
+# see travis-ci.org for details
+
+language: c
+
+# Make sure CMake is installed
+install:
+ - sudo apt-get install mono-complete
+
+# Build mono from source, build the project, and run tests
+script:
+ - xbuild Tracking.sln
+
+# Only watch the development branch
+branches:
+ only:
+   - master
